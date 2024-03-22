@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Degree Converter</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h2>celsius to fahrenheit</h2>
+        <div class="inputdiv">
+            <input type="text" id="input" placeholder="°C">
+        </div>
+        <div>
+            <button type="submit" onclick="convert()">Convert</button>
+        </div>
+        <div id="result">
+
+        </div>
+    </div>
+    <script>
+    function convert(){
+
+        let csVal = Number(document.getElementById("input").value)
+        let fhVal = (csVal*9/5)+32
+        let result = document.getElementById("result")
+        result.innerHTML = fhVal.toFixed(1) + "°F"
+    }
+    </script>
+</body>
+</html>
